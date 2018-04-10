@@ -1,0 +1,39 @@
+
+@media (min-width: 320px) {
+    mat-card {
+        margin: 5% 10%;
+    }    
+}
+
+@media (min-width: 576px) {
+    mat-card {
+        margin: 4% 10%;
+    }    
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+    mat-card {
+        margin: 2% 10%;
+    }    
+}
+
+.mat-raised-button {
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 130%;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+mat-list mat-list-item {
+    height: 80px;
+}

@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.brand {
+    font-family: 'Carter One', cursive;
+    margin: 2% auto 0 auto;
+    text-align: center;
+}
+
+footer {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
