@@ -4,15 +4,9 @@ body {
     padding: 0px;
 }
 
-.brand {
-    font-family: 'Carter One', cursive;
-    margin: 2% auto 0 auto;
-    text-align: center;
-}
-
 footer {
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 10px;
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -38,4 +32,24 @@ footer {
     .container {
         max-width: 1140px;
     }
+    header, main, footer {
+        margin: 0 30%;
+    }
+}
+
+.link {
+    text-decoration: none;
+}
+
+.mat-toolbar.mat-primary a {
+    color: #fff;
+}
+.mat-toolbar.mat-primary .link {
+    font-family: 'Carter One', cursive;
+    font-size: 1.0em;
+}
+
+.mat-toolbar.mat-primary .link-menu {
+    font-size: 1.5em;
+    margin-right: 10px;
 }

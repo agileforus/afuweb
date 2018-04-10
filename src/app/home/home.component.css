@@ -1,13 +1,13 @@
 
 @media (min-width: 320px) {
     mat-card {
-        margin: 5% 10%;
+        /* margin: 5% 10%; */
     }    
 }
 
 @media (min-width: 576px) {
     mat-card {
-        margin: 4% 10%;
+        /* margin: 4% 10%; */
     }    
 }
 
@@ -19,8 +19,14 @@
 
 @media (min-width: 1200px) {
     mat-card {
-        margin: 2% 10%;
+        /* margin: 2% 35%; */
     }    
+}
+
+.brand {
+    font-family: 'Carter One', cursive;
+    margin: 2% auto 0 auto;
+    text-align: center;
 }
 
 .mat-raised-button {
