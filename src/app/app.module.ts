@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import { MatToolbarModule, MatIconModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -20,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { PlanningpokerComponent } from './planningpoker/planningpoker.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { WallpapersService } from './wallpapers.service';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [
+    WallpapersService,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
