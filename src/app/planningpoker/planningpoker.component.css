@@ -1,12 +1,13 @@
 
 .brand {
     font-family: 'Carter One', cursive;
+    text-align: center;
 }
 
-.toolbar-icon {
+.menu-icon {
     padding: 0 14px;
 }
 
-.toolbar-spacer {
+.menu-spacer {
     flex: 1 1 auto;
 }

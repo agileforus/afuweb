@@ -1,26 +1,37 @@
 
-@media (min-width: 320px) {
-    mat-card {
-        /* margin: 5% 10%; */
-    }    
+@media (max-width: 599px) {
+    .home mat-card {
+        margin: 0 5%;
+        margin-top: 5%;
+    }
 }
 
-@media (min-width: 576px) {
-    mat-card {
-        /* margin: 4% 10%; */
-    }    
+@media (min-width: 600px) {
+    .home mat-card {
+        margin: 0 20%;
+        margin-top: 5%;
+    }
 }
 
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
+@media (min-width: 900px) {
+    .home mat-card {
+        margin: 0 30%;
+        margin-top: 5%;
+    }
 }
 
 @media (min-width: 1200px) {
-    mat-card {
-        /* margin: 2% 35%; */
-    }    
+    .home mat-card {
+        margin: 0 30%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .home mat-card {
+        margin: 0 50%;
+        margin-top: 5%;
+    }
 }
 
 .brand {

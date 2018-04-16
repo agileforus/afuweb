@@ -8,11 +8,11 @@ export class WallpapersService {
   wallpapers = [
     { 
       image: '/assets/wallpaper/wallpaper-0.jpg',
-      color: "#000000"
+      color: "#1A237E"
     },
     { 
       image: '/assets/wallpaper/wallpaper-1.jpg',
-      color: "#FFFFFF"
+      color: "#2962FF"
     }
   ];
 
