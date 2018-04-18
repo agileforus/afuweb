@@ -12,11 +12,12 @@ import { AppComponent } from './app.component';
 
 import { CookieService } from 'ngx-cookie-service';
 
-import { MatToolbarModule, MatIconModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { HomeComponent } from './home/home.component';
 import { PlanningpokerComponent } from './planningpoker/planningpoker.component';
@@ -42,6 +43,8 @@ import { WallpapersService } from './wallpapers.service';
     MatListModule,
     MatDividerModule,
     MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
 
     AppRoutingModule
 

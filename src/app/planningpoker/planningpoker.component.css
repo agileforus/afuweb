@@ -1,7 +1,39 @@
 
+@media (max-width: 599px) {
+    main mat-card {
+        margin: 0 5%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 600px) {
+    main mat-card {
+        margin: 0 20%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 900px) {
+    main mat-card {
+        margin: 0 30%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main mat-card {
+        margin: 0 30%;
+        margin-top: 5%;
+    }
+}
+
 .brand {
     font-family: 'Carter One', cursive;
     text-align: center;
+}
+
+main mat-card .brand {
+    font-size: 1.8em
 }
 
 .menu-icon {
@@ -10,4 +42,13 @@
 
 .menu-spacer {
     flex: 1 1 auto;
+}
+
+.form > * {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }
