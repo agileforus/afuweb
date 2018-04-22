@@ -24,13 +24,19 @@ import { PlanningpokerComponent } from './planningpoker/planningpoker.component'
 
 import { AppRoutingModule } from './app-routing.module';
 import { WallpapersService } from './wallpapers.service';
+import { PlanningpokerroomComponent } from './planningpokerroom/planningpokerroom.component';
+import { TopmenuComponent } from './topmenu/topmenu.component';
+import { PokercardsComponent } from './pokercards/pokercards.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PlanningpokerComponent
+    PlanningpokerComponent,
+    PlanningpokerroomComponent,
+    TopmenuComponent,
+    PokercardsComponent
   ],
   imports: [
 

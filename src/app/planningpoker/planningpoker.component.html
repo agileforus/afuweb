@@ -1,12 +1,4 @@
-<header>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span class="brand">Agile For Us</span>
-        <span class="menu-spacer"></span>
-        <a routerLink="/" class="link-menu"><mat-icon class="menu-icon">menu</mat-icon></a>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</header>
+<app-topmenu></app-topmenu>
 
 <main>
   <mat-card>
@@ -23,9 +15,7 @@
       </mat-form-field>
     </div>
     
-    <button mat-raised-button color="primary">ATTEND</button>
-    
-    <p><small i18n>Powered by Marcus Floriano ©2018-2018. Code licensed under an MIT-style License. Documentation licensed under CC BY 4.0.</small></p>
+    <button routerLink="/planning-poker-room" mat-raised-button color="primary">ATTEND</button>
 
   </mat-card>
 </main>
