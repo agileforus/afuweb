@@ -1,4 +1,6 @@
-<div>
-  <img src="/assets/pokercards/pokercard-coffee-break.svg" alt="Photo of a Shiba Inu"/>
+<div class="cards">
+  <div class="card" *ngFor="let card of cards" [@cardzoom]="this.state" (click)="toggleState()">
+    <img class="card-image" src="/assets/pokercards/{{card['image']}}" alt="Coffee Break"/>
+  </div>
 </div>
-  
+

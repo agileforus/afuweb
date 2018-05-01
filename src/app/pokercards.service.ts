@@ -1,38 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import { Injectable } from '@angular/core';
+import {Pokercard} from './pokercard';
 
-@Component({
-  selector: 'app-pokercards',
-  templateUrl: './pokercards.component.html',
-  styleUrls: ['./pokercards.component.css'],
-  animations: [
-    trigger('cardzoom', [
-      state('inactive', style({
-        border: '1px solid yellow',
-        transform: 'translateX(0)'
-      })),
-      state('active', style({
-        border: '1px solid red',
-        transform: 'translateX(0)'
-      })),
-      transition('inactive => active', [
-        style({
-          transform: 'translateX(0)'
-        }),
-        animate(100)
-      ])
-    ])
-  ]
-})
-export class PokercardsComponent implements OnInit {
-
-  state = 'inactive';
+@Injectable()
+export class PokercardsService {
 
   cards = [
     {'slug': 'one',         'name': 'Low hanging fruit',        'image': 'pokercard-low-hanging-fruit.svg'},
@@ -51,12 +21,15 @@ export class PokercardsComponent implements OnInit {
     {'slug': 'brownie',     'name': 'Eat a Brownie',            'image': 'pokercard-eat-a-brownie.svg'}
   ];
 
-  constructor() { }
+  pokercards = [];
 
-  ngOnInit() {
+  constructor() {
+    this.load();
   }
 
-  toggleState() {
-    this.state = this.state === 'active' ? 'inactive' : 'active';
+  private load() {
+    for (const card of this.cards) {
+      this.pokercards.push(new Pokercard(card['slug'], card['name'], card['image']));
+    }
   }
 }

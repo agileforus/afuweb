@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/material';
+
 import { TopmenuComponent } from './topmenu.component';
 
 describe('TopmenuComponent', () => {
@@ -8,7 +10,12 @@ describe('TopmenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopmenuComponent ]
+      declarations: [ TopmenuComponent ],
+      imports: [
+        MatToolbarModule,
+        MatIconModule,
+        MatInputModule
+      ]
     })
     .compileComponents();
   }));

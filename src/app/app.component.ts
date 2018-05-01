@@ -8,17 +8,17 @@ import { WallpapersService } from './wallpapers.service';
 })
 export class AppComponent implements OnInit {
 
+  initials = 'AFU';
+  title = 'Agile For Us';
+
   constructor(
-    private renderer: Renderer2, 
+    private renderer: Renderer2,
     private el: ElementRef,
     private wallpapers: WallpapersService ) {}
 
   ngOnInit() {
     this.wallpapers.set();
-    this.renderer.setStyle(this.el.nativeElement,"background-image", "url('"+this.wallpapers.get()['image']+"'");
+    this.renderer.setStyle(this.el.nativeElement, 'background-image', 'url(\'' + this.wallpapers.get()['image'] + '\'');
   }
-
-  initials = 'AFU';
-  title = 'Agile For Us';
 
 }

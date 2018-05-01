@@ -1,5 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { TopmenuComponent } from '../topmenu/topmenu.component';
+import { PokercardsComponent } from '../pokercards/pokercards.component';
+import { MatCardModule } from '@angular/material/card';
+
+import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/material';
+
 import { PlanningpokerroomComponent } from './planningpokerroom.component';
 
 describe('PlanningpokerroomComponent', () => {
@@ -8,7 +16,18 @@ describe('PlanningpokerroomComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlanningpokerroomComponent ]
+      declarations: [
+        PlanningpokerroomComponent,
+        TopmenuComponent,
+        PokercardsComponent
+      ],
+      imports: [
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatInputModule
+      ]
     })
     .compileComponents();
   }));
