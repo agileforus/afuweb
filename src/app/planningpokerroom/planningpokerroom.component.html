@@ -1,13 +1,36 @@
 <app-topmenu></app-topmenu>
 
 <main>
-    <mat-card>
-        
-        <h1 i18n class="brand">Planning Poker</h1>
+  <mat-card>
 
-        <app-pokercards></app-pokercards>
+    <h1 i18n class="brand">Planning Poker</h1>
 
-    </mat-card>
+    <div class="wrapper">
+
+      <aside class="aside aside-left">
+        <button mat-fab color="primary" (click)="this.moveLeft()">
+          <mat-icon>&#xE314;</mat-icon>
+        </button>
+      </aside>
+
+      <div class="main">
+        <div class="card"
+             *ngFor="let pokercard of this.pokercards"
+             [@cardMove]="pokercard.state"
+             (@cardMove.done)="this.moveEnd()">
+          <img class="card-image" src="/assets/pokercards/{{pokercard.image}}" alt="{{pokercard.title}}"/>
+        </div>
+      </div>
+
+      <aside class="aside aside-right">
+        <button mat-fab color="primary" (click)="this.moveRight()">
+          <mat-icon>&#xE315;</mat-icon>
+        </button>
+      </aside>
+
+    </div>
+
+  </mat-card>
 </main>
 
 <footer>

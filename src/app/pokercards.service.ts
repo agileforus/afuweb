@@ -27,6 +27,14 @@ export class PokercardsService {
     this.load();
   }
 
+  public getBySlug(slug: string) {
+    for (const pokercard of this.pokercards) {
+      if (pokercard.slug === slug) {
+        return pokercard;
+      }
+    }
+    return null;
+  }
   private load() {
     for (const card of this.cards) {
       this.pokercards.push(new Pokercard(card['slug'], card['name'], card['image']));
