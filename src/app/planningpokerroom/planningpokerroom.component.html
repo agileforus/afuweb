@@ -13,11 +13,13 @@
         </button>
       </aside>
 
-      <div class="main">
+      <div class="main" #main>
         <div class="card"
              *ngFor="let pokercard of this.pokercards"
              [@cardMove]="pokercard.state"
-             (@cardMove.done)="this.moveEnd()">
+             (@cardMove.done)="this.moveEnd()"
+             (swipeleft)="this.moveLeft()"
+             (swiperight)="this.moveRight()">
           <img class="card-image" src="/assets/pokercards/{{pokercard.image}}" alt="{{pokercard.title}}"/>
         </div>
       </div>

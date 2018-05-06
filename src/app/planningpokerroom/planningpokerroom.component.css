@@ -1,25 +1,29 @@
 @media (max-width: 599px) {
-    main mat-card {
-        margin: 0 5% 0 5%;
-    }
+  main mat-card {
+    margin: 0 5% 0 5%;
+  }
+
+  .wrapper .aside {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
-    main mat-card {
-      margin: 5% 20% 0 20%;
-    }
+  main mat-card {
+    margin: 5% 20% 0 20%;
+  }
 }
 
 @media (min-width: 900px) {
-    main mat-card {
-      margin: 5% 30% 0 30%;
-    }
+  main mat-card {
+    margin: 5% 30% 0 30%;
+  }
 }
 
 @media (min-width: 1200px) {
-    main mat-card {
-        margin: 5% 30% 0 30%;
-    }
+  main mat-card {
+    margin: 5% 30% 0 30%;
+  }
 }
 
 .card, .card-image {
@@ -28,7 +32,7 @@
 
 .card-image {
   border-radius: 0.5em;
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 }
 
 .wrapper {

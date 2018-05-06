@@ -10,6 +10,8 @@ import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/materi
 import { PlanningpokerroomComponent } from './planningpokerroom.component';
 import { PokercardsService } from '../pokercards.service';
 
+import 'hammerjs';
+
 describe('PlanningpokerroomComponent', () => {
   let component: PlanningpokerroomComponent;
   let fixture: ComponentFixture<PlanningpokerroomComponent>;
