@@ -5,8 +5,31 @@
 
     <h1 i18n class="brand">Planning Poker</h1>
 
-    <div class="wrapper">
+    <div class="members">
+      <aside class="aside aside-left">
+        <button mat-raised-button color="primary"
+                (mousedown)="this.membersMoveLeft()"
+                (mouseup)="this.membersMoveStop()">
+          <mat-icon>&#xE314;</mat-icon>
+        </button>
+      </aside>
+      <div class="main" #membersMain>
+        <div class="scroll" #membersScroll>
+          <div class="member" *ngFor="let member of this.members">
+            <img class="member-image" src="/assets/avatars/{{member.avatar}}"/>
+          </div>
+        </div>
+      </div>
+      <aside class="aside aside-right">
+        <button mat-raised-button color="primary"
+                (mousedown)="this.membersMoveRight()"
+                (mouseup)="this.membersMoveStop()">
+          <mat-icon>&#xE315;</mat-icon>
+        </button>
+      </aside>
+    </div>
 
+    <div class="cards">
       <aside class="aside aside-left">
         <button mat-fab color="primary" (click)="this.moveLeft()">
           <mat-icon>&#xE314;</mat-icon>
@@ -29,7 +52,6 @@
           <mat-icon>&#xE315;</mat-icon>
         </button>
       </aside>
-
     </div>
 
   </mat-card>

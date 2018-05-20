@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 import { PokercardsService } from '../pokercards.service';
 import { Pokercard } from '../pokercard';
+
+import { MembersService } from '../members.service';
 
 import {
   trigger,
@@ -16,7 +18,7 @@ import {
   selector: 'app-planningpokerroom',
   templateUrl: './planningpokerroom.component.html',
   styleUrls: ['./planningpokerroom.component.css'],
-  providers: [ PokercardsService ],
+  providers: [ PokercardsService, MembersService ],
   animations: [
     trigger('cardMove', [
       state(Pokercard.STOPPED, style({
@@ -64,13 +66,24 @@ import {
 })
 export class PlanningpokerroomComponent implements OnInit {
 
+  @ViewChild('membersMain')
+  membersMain: ElementRef;
+
+  @ViewChild('membersScroll')
+  membersScroll: ElementRef;
+
   pokercards = [];
+  members = [];
+  membersMoveState = 'stopped';
+  membersMovePosition = 0;
 
   constructor(
-    private pokercardsService: PokercardsService
+    private pokercardsService: PokercardsService,
+    private membersService: MembersService
   ) {
     this.pokercards = pokercardsService.pokercards;
     this.pokercards[0].setState(Pokercard.STOPPED);
+    this.members = membersService.findByRoom();
   }
 
   ngOnInit() {
@@ -110,6 +123,42 @@ export class PlanningpokerroomComponent implements OnInit {
     if (selected !== null) {
       this.pokercards[selected].state = Pokercard.HIDDEN;
     }
+  }
+
+  membersMove(direction) {
+    const that = this;
+    setTimeout(function () {
+      console.log(that.membersMovePosition);
+      const size = that.membersScroll.nativeElement.scrollWidth - that.membersMain.nativeElement.offsetWidth;
+      if (direction < 0) {
+        if ((that.membersMovePosition * direction) < size) {
+          that.membersMovePosition -= 10;
+          that.membersScroll.nativeElement.style = 'left: ' + that.membersMovePosition + 'px';
+        }
+      } else {
+        if (that.membersMovePosition < 0) {
+          that.membersMovePosition += 10;
+          that.membersScroll.nativeElement.style = 'left: ' + that.membersMovePosition + 'px';
+        }
+      }
+      if (that.membersMoveState === 'move') {
+        that.membersMove(direction);
+      }
+    }, 1000 / 60);
+  }
+
+  membersMoveLeft() {
+    this.membersMoveState = 'move';
+    this.membersMove(-1);
+  }
+
+  membersMoveRight() {
+    this.membersMoveState = 'move';
+    this.membersMove(1);
+  }
+
+  membersMoveStop() {
+    this.membersMoveState = 'stopped';
   }
 
   private getIndexByState(st: string) {

@@ -9,6 +9,7 @@ import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/materi
 
 import { PlanningpokerroomComponent } from './planningpokerroom.component';
 import { PokercardsService } from '../pokercards.service';
+import { MembersService } from '../members.service';
 
 import 'hammerjs';
 
@@ -30,7 +31,8 @@ describe('PlanningpokerroomComponent', () => {
         MatInputModule
       ],
       providers: [
-        PokercardsService
+        PokercardsService,
+        MembersService
       ]
     })
     .compileComponents();
