@@ -17,6 +17,7 @@
         <div class="scroll" #membersScroll>
           <div class="member" *ngFor="let member of this.members">
             <img class="member-image" src="/assets/avatars/{{member.avatar}}"/>
+            <div class="member-name"><small>{{member.name}}</small></div>
           </div>
         </div>
       </div>

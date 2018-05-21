@@ -30,7 +30,7 @@ export class MembersService {
     { 'image': 'avatar-21.svg' },
     { 'image': 'avatar-22.svg' },
     { 'image': 'avatar-23.svg' },
-    { 'image': 'avatar-25.svg' }
+    { 'image': 'avatar-24.svg' }
   ]
 
   constructor() { }
@@ -38,7 +38,7 @@ export class MembersService {
   findByRoom() {
     const result = [];
     for (const avatar of this.avatars) {
-      result.push(new Member('marcus.floriano@gmail.com', avatar['image']));
+      result.push(new Member('Marcus Floriano', avatar['image']));
     }
     return result;
   }

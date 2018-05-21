@@ -1,5 +1,6 @@
 export class Member {
-  constructor(public email: string, public avatar: string) {
+  constructor(public name: string, public avatar: string) {
+    this.name = name;
     this.avatar = avatar;
   }
 }

@@ -55,9 +55,17 @@
   position: relative;
 }
 
-.members .main .scroll .member,
-.members .main .scroll .member .member-image {
+.members .main .scroll .member {
   height: 100px;
+}
+
+.members .main .scroll .member .member-image {
+  height: 80px;
+}
+
+.members .main .scroll .member .member-name {
+  text-align: center;
+  font-size: x-small;
 }
 
 .card, .card-image {
