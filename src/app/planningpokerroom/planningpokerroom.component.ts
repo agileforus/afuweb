@@ -128,7 +128,6 @@ export class PlanningpokerroomComponent implements OnInit {
   membersMove(direction) {
     const that = this;
     setTimeout(function () {
-      console.log(that.membersMovePosition);
       const size = that.membersScroll.nativeElement.scrollWidth - that.membersMain.nativeElement.offsetWidth;
       if (direction < 0) {
         if ((that.membersMovePosition * direction) < size) {

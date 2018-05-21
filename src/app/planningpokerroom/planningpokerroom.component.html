@@ -8,7 +8,7 @@
     <div class="members">
       <aside class="aside aside-left">
         <button mat-raised-button color="primary"
-                (mousedown)="this.membersMoveLeft()"
+                (mousedown)="this.membersMoveRight()"
                 (mouseup)="this.membersMoveStop()">
           <mat-icon>&#xE314;</mat-icon>
         </button>
@@ -22,7 +22,7 @@
       </div>
       <aside class="aside aside-right">
         <button mat-raised-button color="primary"
-                (mousedown)="this.membersMoveRight()"
+                (mousedown)="this.membersMoveLeft()"
                 (mouseup)="this.membersMoveStop()">
           <mat-icon>&#xE315;</mat-icon>
         </button>
@@ -31,7 +31,7 @@
 
     <div class="cards">
       <aside class="aside aside-left">
-        <button mat-fab color="primary" (click)="this.moveLeft()">
+        <button mat-fab color="primary" (click)="this.moveRight()">
           <mat-icon>&#xE314;</mat-icon>
         </button>
       </aside>
@@ -48,7 +48,7 @@
       </div>
 
       <aside class="aside aside-right">
-        <button mat-fab color="primary" (click)="this.moveRight()">
+        <button mat-fab color="primary" (click)="this.moveLeft()">
           <mat-icon>&#xE315;</mat-icon>
         </button>
       </aside>
