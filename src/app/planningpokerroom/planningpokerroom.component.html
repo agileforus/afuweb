@@ -38,12 +38,30 @@
       </aside>
 
       <div class="main" #main>
+        <div class="card" style="display: none"
+             [@cardFlip]="this.cover"
+             (@cardFlip.done)="this.flipEnd()">
+          <div class="card-info">
+            <button mat-icon-button (click)="this.flipOut()">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
+          <div class="card-description" [innerHtml]="this.coverInfo"></div>
+          <img class="card-image" src="/assets/pokercards/pokercard-cover.svg"/>
+        </div>
         <div class="card"
              *ngFor="let pokercard of this.pokercards"
+             [@cardFlip]="pokercard.flip"
+             (@cardFlip.done)="this.flipEnd()"
              [@cardMove]="pokercard.state"
              (@cardMove.done)="this.moveEnd()"
              (swipeleft)="this.moveLeft()"
              (swiperight)="this.moveRight()">
+          <div class="card-info">
+            <button mat-icon-button (click)="this.flipIn()">
+              <mat-icon>info</mat-icon>
+            </button>
+          </div>
           <img class="card-image" src="/assets/pokercards/{{pokercard.image}}" alt="{{pokercard.title}}"/>
         </div>
       </div>
