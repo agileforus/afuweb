@@ -34,7 +34,7 @@
 
 .members aside button {
   padding: 0px;
-  height: 100px;
+  height: 120px;
   min-width: 30px;
 }
 
@@ -57,10 +57,20 @@
 
 .members .main .scroll .member {
   height: 100px;
+  width: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.members .main .scroll .member #av16,
+.members .main .scroll .member #av18 {
+  position: relative;
+  left: -28px;
 }
 
 .members .main .scroll .member .member-image {
   height: 80px;
+  margin: 0 auto;
 }
 
 .members .main .scroll .member .member-name {
