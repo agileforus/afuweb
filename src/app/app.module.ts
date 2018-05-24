@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
+import { DeviceDetectorModule } from 'ngx-device-detector';
 import { CookieService } from 'ngx-cookie-service';
 
 import { MatToolbarModule, MatIconModule, MatInputModule } from '@angular/material';
@@ -50,7 +51,9 @@ import { TopmenuComponent } from './topmenu/topmenu.component';
     MatInputModule,
     MatFormFieldModule,
 
-    AppRoutingModule
+    AppRoutingModule,
+
+    DeviceDetectorModule.forRoot()
 
   ],
   providers: [

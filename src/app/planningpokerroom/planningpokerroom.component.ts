@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
+import { DeviceDetectorService } from 'ngx-device-detector';
+
 import { PokercardsService } from '../pokercards.service';
 import { Pokercard } from '../pokercard';
 
@@ -123,8 +125,10 @@ export class PlanningpokerroomComponent implements OnInit {
   membersMovePosition = 0;
   cover = Pokercard.FLIP_COVER_HIDDEN;
   coverInfo = '';
+  mobile = false;
 
   constructor(
+    private deviceService: DeviceDetectorService,
     private pokercardsService: PokercardsService,
     private membersService: MembersService
   ) {
@@ -132,6 +136,10 @@ export class PlanningpokerroomComponent implements OnInit {
     this.pokercards[0].setState(Pokercard.STOPPED);
     this.pokercards[0].setFlip(Pokercard.FLIP_STOPPED);
     this.members = membersService.findByRoom();
+
+    if (!this.deviceService.isDesktop()) {
+      this.mobile = true;
+    }
   }
 
   ngOnInit() {

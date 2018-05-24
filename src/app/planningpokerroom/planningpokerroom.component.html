@@ -6,15 +6,15 @@
     <h1 i18n class="brand">Planning Poker</h1>
 
     <div class="members">
-      <mat-icon class="mat-icon-aside">&#xE314;</mat-icon>
-      <aside class="aside aside-left">
+      <mat-icon *ngIf="this.mobile === true" class="mat-icon-aside">&#xE314;</mat-icon>
+      <aside *ngIf="this.mobile === false" class="aside aside-left">
         <button mat-raised-button color="primary"
                 (mousedown)="this.membersMoveRight()"
                 (mouseup)="this.membersMoveStop()">
           <mat-icon>&#xE314;</mat-icon>
         </button>
       </aside>
-      <div class="main" #membersMain>
+      <div class="main" #membersMain [style.overflow-x]="this.mobile ? 'auto' : 'hidden'">
         <div class="scroll" #membersScroll>
           <div class="member" *ngFor="let member of this.members">
             <img class="member-image" src="/assets/avatars/{{member.avatar}}" id="{{member.id}}"/>
@@ -22,18 +22,18 @@
           </div>
         </div>
       </div>
-      <aside class="aside aside-right">
+      <aside *ngIf="this.mobile === false" class="aside aside-right">
         <button mat-raised-button color="primary"
                 (mousedown)="this.membersMoveLeft()"
                 (mouseup)="this.membersMoveStop()">
           <mat-icon>&#xE315;</mat-icon>
         </button>
       </aside>
-      <mat-icon class="mat-icon-aside">&#xE315;</mat-icon>
+      <mat-icon *ngIf="this.mobile === true" class="mat-icon-aside">&#xE315;</mat-icon>
     </div>
 
     <div class="cards">
-      <aside class="aside aside-left">
+      <aside *ngIf="this.mobile === false" class="aside aside-left">
         <button mat-fab color="primary" (click)="this.moveRight()">
           <mat-icon>&#xE314;</mat-icon>
         </button>
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <aside class="aside aside-right">
+      <aside *ngIf="this.mobile === false" class="aside aside-right">
         <button mat-fab color="primary" (click)="this.moveLeft()">
           <mat-icon>&#xE315;</mat-icon>
         </button>
