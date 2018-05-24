@@ -1,0 +1,51 @@
+@media (max-width: 599px) {
+  mat-card {
+    margin: 0 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: 600px) {
+  mat-card {
+    margin: 0 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: 900px) {
+  mat-card {
+    margin: 0 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  mat-card {
+    margin: 0 30%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+@media (min-width: 1800px) {
+  mat-card {
+    margin: 0 50%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+mat-card {
+  padding: 10px;
+}
+
+small {
+  font-size: xx-small;
+}
+
+p {
+  line-height: 7px;
+}

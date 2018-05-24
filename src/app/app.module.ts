@@ -27,6 +27,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WallpapersService } from './wallpapers.service';
 import { PlanningpokerroomComponent } from './planningpokerroom/planningpokerroom.component';
 import { TopmenuComponent } from './topmenu/topmenu.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { TopmenuComponent } from './topmenu/topmenu.component';
     HomeComponent,
     PlanningpokerComponent,
     PlanningpokerroomComponent,
-    TopmenuComponent
+    TopmenuComponent,
+    FooterComponent
   ],
   imports: [
 
