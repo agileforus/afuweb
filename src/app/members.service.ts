@@ -38,7 +38,7 @@ export class MembersService {
   findByRoom() {
     const result = [];
     for (const avatar of this.avatars) {
-      result.push(new Member(avatar['id'], 'Marcus Floriano', avatar['image']));
+      result.push(new Member(avatar['id'], 'Marcus Floriano', avatar['image'], 'wait'));
     }
     return result;
   }

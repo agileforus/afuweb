@@ -5,6 +5,11 @@
 
     <h1 i18n class="brand">Planning Poker</h1>
 
+    <div class="members-voted">
+      <small>VOTED</small>
+      <span>2/10</span>
+    </div>
+
     <div class="members">
       <mat-icon *ngIf="this.mobile === true" class="mat-icon-aside">&#xE314;</mat-icon>
       <aside *ngIf="this.mobile === false" class="aside aside-left">
@@ -18,6 +23,7 @@
         <div class="scroll" #membersScroll>
           <div class="member" *ngFor="let member of this.members">
             <img class="member-image" src="/assets/avatars/{{member.avatar}}" id="{{member.id}}"/>
+            <div class="member-status"><small>{{member.status}}</small></div>
             <div class="member-name"><small>{{member.name}}</small></div>
           </div>
         </div>

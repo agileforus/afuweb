@@ -1,40 +1,30 @@
 @media (max-width: 599px) {
   mat-card {
-    margin: 0 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 10px 5% 10px 5%;
   }
 }
 
 @media (min-width: 600px) {
   mat-card {
-    margin: 0 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 10px 20% 1px 20%;
   }
 }
 
 @media (min-width: 900px) {
   mat-card {
-    margin: 0 30%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 10px 30% 10px 30%;
   }
 }
 
 @media (min-width: 1200px) {
   mat-card {
-    margin: 0 30%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin: 10px 30% 10px 30%;
   }
 }
 
 @media (min-width: 1800px) {
   mat-card {
-    margin: 0 50%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin: 10px 50% 10px 50%;
   }
 }
 
