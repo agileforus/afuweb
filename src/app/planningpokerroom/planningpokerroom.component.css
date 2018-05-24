@@ -2,8 +2,25 @@
   main mat-card {
     margin: 0 5% 0 5%;
   }
-
-  .wrapper .aside {
+  .members .aside {
+    display: none;
+  }
+  .members .main {
+    overflow-x: scroll;
+  }
+  .members .main .scroll .member {
+    width: 80px;
+  }
+  .members .main .scroll .member #av16,
+  .members .main .scroll .member #av18 {
+    position: relative;
+    left: -28px;
+  }
+  .members .main .scroll .member .member-image {
+    height: 60px;
+    margin: 0 auto;
+  }
+  .cards .aside {
     display: none;
   }
 }
@@ -12,11 +29,47 @@
   main mat-card {
     margin: 5% 20% 0 20%;
   }
+  .members .mat-icon-aside {
+    display: none;
+  }
+  .members .main {
+    overflow: hidden;
+  }
+  .members .main .scroll .member {
+    width: 80px;
+  }
+  .members .main .scroll .member #av16,
+  .members .main .scroll .member #av18 {
+    position: relative;
+    left: -28px;
+  }
+  .members .main .scroll .member .member-image {
+    height: 80px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 900px) {
   main mat-card {
     margin: 5% 30% 0 30%;
+  }
+  .members .mat-icon-aside {
+    display: none;
+  }
+  .members .main {
+    overflow: hidden;
+  }
+  .members .main .scroll .member {
+    width: 80px;
+  }
+  .members .main .scroll .member #av16,
+  .members .main .scroll .member #av18 {
+    position: relative;
+    left: -28px;
+  }
+  .members .main .scroll .member .member-image {
+    height: 80px;
+    margin: 0 auto;
   }
 }
 
@@ -24,12 +77,35 @@
   main mat-card {
     margin: 5% 30% 0 30%;
   }
+  .members .mat-icon-aside {
+    display: none;
+  }
+  .members .main {
+    overflow: hidden;
+  }
+  .members .main .scroll .member {
+    width: 80px;
+  }
+  .members .main .scroll .member #av16,
+  .members .main .scroll .member #av18 {
+    position: relative;
+    left: -28px;
+  }
+  .members .main .scroll .member .member-image {
+    height: 80px;
+    margin: 0 auto;
+  }
 }
-
 
 .members {
   display: flex;
   align-items: center;
+}
+
+.members .mat-icon-aside {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .members aside button {
@@ -41,35 +117,22 @@
 .members .main {
   flex-direction: row;
   display: flex;
-  overflow: hidden;
   padding: 0px;
-  height: 100px;
-  overflow: hidden;
 }
 
 .members .main .scroll {
   flex-direction: row;
   display: flex;
-  height: 100px;
   align-items: flex-end;
   position: relative;
 }
 
 .members .main .scroll .member {
-  height: 100px;
-  width: 80px;
   text-align: center;
   overflow: hidden;
 }
 
-.members .main .scroll .member #av16,
-.members .main .scroll .member #av18 {
-  position: relative;
-  left: -28px;
-}
-
 .members .main .scroll .member .member-image {
-  height: 80px;
   margin: 0 auto;
 }
 
